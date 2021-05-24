@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Web UI Kit &amp; Dashboard Template based on Bootstrap">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, web ui kit, dashboard template, admin template">
+
+	<link rel="shortcut icon" href="../static/img/icons/icon-48x48.png" />
+
+	<title>检测结果</title>
+
+	<link href="../static/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+
+
+		<div class="main">
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">检测结果仅供参考，还是要以人为准</h1>
+
+					<div class="card">
+
+						<div class="card-body" id="card_body">
+							<div class="row">
+								{% for res_part in res%}
+									<div class="col-md-12 text-center">
+									<div class="card bg-light py-2 py-md-3 border">
+										<div class="card-body">
+											{% for res_line in res_part %}
+												{{res_line}}</br>
+											{% endfor %}
+
+										</div>
+									</div>
+
+								</div>
+								{% endfor %}
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</main>
+
+
+		</div>
+	</div>
+
+	<script src="../static/js/app.js"></script>
+
+</body>
+
+</html>
